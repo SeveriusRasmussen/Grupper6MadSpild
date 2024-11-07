@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #31854d;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    height: 50px;
+    background-color: #276b3a;
+}
+
+.name-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.name-buttons button {
+    background-color: white;
+    color: #000000;
+}
+
+.name-buttons button:hover {
+    background-color: #276b3a;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button img {
+    height: 20px;
+}
