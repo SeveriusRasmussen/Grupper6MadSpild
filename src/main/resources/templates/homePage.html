@@ -9,11 +9,29 @@
 </head>
 <body>
     <div class="banner">
-        <img src="pictures/img.png" alt="Logo" class="logo">
+        <img src="pictures/FoodWaste.png" alt="Logo" class="logo">
         <div class="name-buttons">
-            <button>Forbruger</button>
-            <button>Virksomhed</button>
-            <button>Organisation</button>
+            <div class="dropdown">
+                <button>Forbruger</button>
+                <div class="dropdown-content">
+                    <a href="/forbruger/opskrifter">Opskrifter</a>
+                    <a href="/forbruger/tips">Tips i holdbarhed</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Virksomhed</button>
+                <div class="dropdown-content">
+                    <a href="/virksomhed/sporing">Sporingsværktøj</a>
+                    <a href="/virksomhed/donation">Donation</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Organisation</button>
+                <div class="dropdown-content">
+                    <a href="/organisation/madspildgård">Madspild til gårde</a>
+                    <a href="/organisation/madspildhjemløse">Madspild til hjemløse</a>
+                </div>
+            </div>
         </div>
         <div class="search">
             <input type="text" placeholder="Søg...">
@@ -22,9 +40,6 @@
             </button>
         </div>
     </div>
-    <div clas="content">
-
-    </div>
-<!-- Batul kode herunder -->
+<!-- page's kode herunder -->
 </body>
 </html>
