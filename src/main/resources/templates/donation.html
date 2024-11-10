@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bannerItems.css">
-    <title>Danmark mod Madspild Homepage</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donér Madoverskud</title>
+  <link rel="stylesheet" href="/bannerItems.css">
+</head>
+<body>
+<!-- Inkluder banneret -->
+<div th:replace="fragments/banner :: banner"></div>
 
-  </head>
-  <body>
-    <div th:replace="fragments/banner :: banner"></div>
-    <!-- page's kode herunder -->
-    <div th:replace="fragments/footer :: footer"></div>
-  </body>
+<h1>Donér Madoverskud</h1>
+<form th:action="@{/virksomhed/donation}" th:object="${donation}" method="post">
+  <label for="companyName">Virksomhedsnavn:</label>
+  <br>
+  <input type="text" id="companyName" th:field="*{companyName}" required><br>
+
+  <label for="message">Besked til organisationen:</label>
+  <br>
+  <textarea id="message" th:field="*{message}" rows="5" required></textarea><br>
+
+  <button type="submit">Send Opslag</button>
+</form>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
 </html>
