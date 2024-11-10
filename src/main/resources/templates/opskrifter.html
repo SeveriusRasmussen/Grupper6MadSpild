@@ -4,12 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bannerItems.css">
+    <link rel="stylesheet" href="/opskrifter.css">
     <title>Danmark mod Madspild Homepage</title>
 
   </head>
   <body>
   <div th:replace="fragments/banner :: banner"></div>
   <!-- page's kode herunder -->
+
+    <h1>Madrester til nye opskrifter</h1>
+    <div class="content-box">
+      <p>Brug vores opskrift- søger til at omdanne dine rester til lækre, nye retter. Indtast det, du har tilovers – som ris eller grøntsager – og få straks forslag til opskrifter, der minimerer madspild og giver nye smagsoplevelser.</p>
+    </div>
+
+  <div class="search-box-container">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Rester af ris">
+    </div>
+  </div>
+
+  <div class="page-container">
+    <!-- Container til opskrifterne -->
+    <div class="recipes-container">
+      <div class="recipe-card">
+        <div class="recipe-info">
+          <p><strong>Opskrift navn:</strong> sprøde risfrikadeller med grøntsager</p>
+          <p><strong>Rating stars:</strong>
+            <span class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                    </span>
+          </p>
+          <p><strong>Ingrediens indhold:</strong> Ris, løg, gulerod, æg, revet ost, friske krydderurter, salt og peber, hvidløg og smør</p>
+        </div>
+        <div class="recipe-image">
+          <img src="https://madensverden.dk/wp-content/uploads/2022/09/risfrikadeller-1.jpg" alt="Billede af sprøde risfrikadeller med grøntsager">
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-info">
+          <p><strong>Opskrift navn:</strong> Rissalat - lækker salat med ris og grønt</p>
+          <p><strong>Rating Stars:</strong>
+            <span class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                    </span>
+          </p>
+          <p><strong>Ingrediens indhold:</strong> Ris, grøntsager: agurk, tomat, gulerod, peberfrugt, kikærter, fetaost, salat, olivenolie, citronsaft</p>
+        </div>
+        <div class="recipe-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtg_BdqLZUBA2gfi209ucxDpjrsyDXLIwfSw&s" alt="Billede af rissalat med grøntsager">
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorit opskrifter boks -->
+    <div class="favorite-recipes-box">
+      <div class="header">
+        <h2>Favorite opskrifter:</h2>
+        <span class="star">★</span>
+      </div>
+      <ul class="recipe-list">
+        <li>Sprøde risfrikadeller med grøntsager</li>
+        <li>Grøntsagstærte</li>
+        <li>Kyllinge tacos</li>
+      </ul>
+    </div>
+  </div>
+
+
   <div th:replace="fragments/footer :: footer"></div>
   </body>
 </html>

@@ -1,0 +1,171 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Title styling */
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 1.5em 0 0.5em;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Content box styling */
+.content-box {
+    background-color: #82D66D;
+    margin: 0.5em auto 1.5em;
+    padding: 1.5em;
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #040404;
+}
+
+/* Layout for main content */
+.layout {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    width: 85%;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Farm list styling */
+.farm-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.farm-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #82D66D;
+    width: 998px;
+    height: 202px;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.farm-info {
+    font-size: 16px;
+    color: #333;
+    width: 45%;
+}
+
+.farm-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.farm-image {
+    width: 499px;
+    height: 202px;
+    overflow: hidden;
+}
+
+.farm-image img {
+    width: 499px;
+    height: 202px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar styling */
+.sidebar {
+    flex: 1;
+    background-color: #82D66D;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #040404;
+}
+/* Search box styling */
+/* Sidebar styling */
+.sidebar {
+    background-color: #82D66D; /* Grøn baggrund */
+    padding: 1em;
+    border-radius: 20px; /* Runde hjørner */
+    width: 300px; /* Fast bredde */
+    margin: 20px auto; /* Centrerer på siden */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Search box styling */
+.search-box {
+    position: relative; /* For at kunne placere søgeikonet inde i input */
+    margin-bottom: 1em; /* Afstand til liste */
+}
+
+.search-box input[type="text"] {
+    width: calc(100% - 40px); /* Sikrer, at der er plads til ikonet */
+    padding: 0.5em 0.5em 0.5em 2em; /* Indvendig afstand med ekstra plads til venstre til ikonet */
+    border-radius: 8px; /* Runde hjørner */
+    border: 1px solid #ccc; /* Let grå kant */
+    font-size: 16px; /* Størrelse på teksten */
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+/* Farm list styling */
+.farm-list {
+    list-style-type: none; /* Fjerner standard bullet points */
+    padding: 0; /* Fjerner indre afstand */
+    margin: 0; /* Fjerner ydre afstand */
+}
+
+.farm-list li {
+    font-size: 16px;
+    margin-bottom: 0.75em; /* Afstand mellem gårdene */
+    padding-left: 20px; /* Afstand til venstre for bullet point */
+    position: relative; /* For at kunne placere det tilpassede bullet point */
+}
+
+/* Tilpasset bullet point */
+.farm-list li::before {
+    content: "•"; /* Bruger punktum som bullet */
+    color: black; /* Sort farve på bullet */
+    position: absolute;
+    left: 0; /* Placeres helt til venstre */
+    top: 50%;
+    transform: translateY(-50%); /* Vertikal justering til midten */
+    font-size: 20px; /* Gør bullet større */
+}
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    background-color: #276b3a;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+    margin: 1em 0 0 1em;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #388e3c;
+}
