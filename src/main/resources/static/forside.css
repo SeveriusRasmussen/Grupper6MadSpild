@@ -1,0 +1,32 @@
+/* Billedet */
+.flex-container {
+    width: 100%;
+    max-height: calc(100vh - 200px); /* Justér 200px afhængigt af højden på banner og footer*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centerer horisontalt */
+    align-items: center; /* Centerer lodret */
+}
+.centered-image {
+    max-width: 1100px;
+    height: auto;
+    opacity: 0.5;
+}
+/* information bokser */
+.infoVærd {
+    display: flex;
+    flex: 1;
+}
+.box {
+    flex: 1;
+    margin: 5px 10px;
+    padding: 20px;
+    background-color: #81d46c;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+}
+.box h1 {
+    margin: 5px 0; /* reducér top- og bundmargin */
+}
