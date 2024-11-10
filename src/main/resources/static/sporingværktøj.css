@@ -13,8 +13,8 @@
     height: auto;
     opacity: 0.5;
 }
-/* information bokser */
 
+/* information bokser */
 .infoVærd {
     padding-right: 50%;
     display: flex;
@@ -31,4 +31,52 @@
 }
 .box h1 {
     margin: 5px 0; /* reducér top- og bundmargin */
+}
+
+/* Buttons */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description {
+    display: none; /* Skjul beskrivelsen som standard */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+.button-wrapper:hover .description,
+.button-wrapper:focus-within .description {
+    display: block; /* Vis beskrivelsen ved hover eller fokus */
+}
+
+/* Tabellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
