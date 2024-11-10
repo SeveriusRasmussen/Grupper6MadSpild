@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bannerItems.css">
-    <title>Danmark mod Madspild Homepage</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/bannerItems.css">
+        <link rel="stylesheet" href="/sporingværktøj.css">
+        <title>Danmark mod Madspild Homepage</title>
 
-</head>
-<body>
-<div th:replace="fragments/banner :: banner"></div>
-<!-- page's kode herunder -->
+    </head>
+    <body>
+        <div th:replace="fragments/banner :: banner"></div>
+        <!-- page's kode herunder -->
+        <h1 style="margin-left: 2%"> Madspild Sporingsværktøj </h1>
+        <div class="infoVærd">
+            <div class="box">
+                <h1>Velkommen til madspild sporingsværktøj!</h1>
+                <p>
+                    Virksomhederne kan skabe sig en overblik på deres madspild her i siden.
+                    <br>
+                    I kan bruge de forskellige buttons til ændre information om jeres madspild og gemme dem i databasen.
+                    <br>
+                    Herunder på tabellen kan I have overblik over information I har registreret i jeres databasen.
+                    <br>
+                    For mere info:
+                    (Link her til en ny side til om hvordan man bruge siden.)
+                </p>
+            </div>
+        </div>
 
-
-<div th:replace="fragments/footer :: footer"></div>
-</body>
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
 </html>
