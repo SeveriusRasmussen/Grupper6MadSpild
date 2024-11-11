@@ -18,7 +18,7 @@ body {
 }
 
 .name-buttons {
-    padding-right: 1150px;
+    /*padding-right: 1150px;*/
     display: flex;
     gap: 20px;
 }
@@ -54,7 +54,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ADFF2FFF;
+    background-color: #82D66D;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
