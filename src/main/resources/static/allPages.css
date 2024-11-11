@@ -18,7 +18,6 @@ body {
 }
 
 .name-buttons {
-    padding-right: 750px;
     display: flex;
     gap: 10px;
 }
