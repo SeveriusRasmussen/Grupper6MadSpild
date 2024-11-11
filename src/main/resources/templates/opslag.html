@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/bannerItems.css"> <!-- DON'T DELETE! -->
+        <title>Organisationens Opslag</title>
+    </head>
+    <body>
+    <!-- Banner DON'T DELETE! -->
+        <div th:replace="fragments/banner :: banner"></div>
+
+        <h1>Opslag fra Virksomheder</h1>
+        <div th:each="donation : ${donations}">
+            <h2>Virksomhedsnavn: <span th:text="${donation.companyName}"></span></h2>
+            <p>Besked: <span th:text="${donation.message}"></span></p>
+            <hr>
+        </div>
+
+        <!-- Footer DON'T DELETE! -->
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
+</html>

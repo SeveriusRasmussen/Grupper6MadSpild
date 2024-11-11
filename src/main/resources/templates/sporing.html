@@ -1,45 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/allPages.css">
-    <title>Danmark mod Madspild Homepage</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/bannerItems.css">
+        <link rel="stylesheet" href="/sporingværktøj.css">
+        <title>Danmark mod Madspild Homepage</title>
 
-</head>
-<body>
-<div class="banner">
-    <img src="/pictures/FoodWaste.png" alt="Logo" class="logo">
-    <div class="name-buttons">
-        <div class="dropdown">
-            <button>Forbruger</button>
-            <div class="dropdown-content">
-                <a href="/forbruger/opskrifter">Opskrifter</a>
-                <a href="/forbruger/tips">Tips i holdbarhed</a>
+    </head>
+    <body>
+        <div th:replace="fragments/banner :: banner"></div>
+        <!-- page's kode herunder -->
+        <div class="infoVærd">
+            <div class="box">
+                <h1>Velkommen til madspild sporingsværktøj!</h1>
+                <p>
+                    Virksomhederne kan skabe sig en overblik på deres madspild her i siden.
+                    <br>
+                    I kan bruge de forskellige buttons til ændre information om jeres madspild og gemme dem i databasen.
+                    <br>
+                    Herunder på tabellen kan I have overblik over information I har registreret i jeres databasen.
+                    <br>
+                    For mere info:
+                    (Link her til en ny side til om hvordan man bruge siden.)
+                </p>
+                <!-- Tabellen her -->
+                <div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>    </th> <!-- header -->
+                            <th>Dato:</th>
+                            <th>Madspild i kilo:</th>
+                            <th>Årsag:</th>
+                            <th>Gives til:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Mandag</th> <!-- data -->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th>Tirsdag</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th>Onsdag</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th>Torsdag</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th>Fredag</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Buttons her -->
+                <!--
+                    Indtast en ny dato i dags madspild
+                    Vis oplysning fra en dato
+                    Se oplysninger for flere dato
+                    Ændre oplysning for valgt dato
+                    Slet oplysning for valgt dato
+                    Slet alle oplysninger for angiven periode
+                -->
+                <div>
+                    <div class="button-container">
+                        <div class="button-wrapper">
+                            <button class="button"> Indtast en ny dato </button>
+                            <div class="description">Tilføj nye oplysninger til kalenderen for den aktuelle dag.</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button"> Se en dato </button>
+                            <div class="description"> Se information om en dato </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button"> Opdatere en dato </button>
+                            <div class="description"> Opdatere en valgte dato </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button"> Slet en dato </button>
+                            <div class="description"> Slet en valgte dato </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button"> Se datoerne </button>
+                            <div class="description"> Se alle datoerne fra en valgte periode </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button"> Slette alle data </button>
+                            <div class="description"> Slette alle datoerne fra en valgte periode </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <img src="/pictures/dogThatSniffsFood.webp" alt="Dog Sniffing Food" class="centered-image">
         </div>
-        <div class="dropdown">
-            <button>Virksomhed</button>
-            <div class="dropdown-content">
-                <a href="/virksomhed/sporing">Sporingsværktøj</a>
-                <a href="/virksomhed/donation">Donation</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button>Organisation</button>
-            <div class="dropdown-content">
-                <a href="/organisation/madspildgård">Madspild til gårde</a>
-                <a href="/organisation/madspildhjemløse">Madspild til hjemløse</a>
-            </div>
-        </div>
-    </div>
-    <div class="search">
-        <input type="text" placeholder="Søg...">
-        <button class="search-button">
-            <img src="magnifying-glass.png" alt="Søg">
-        </button>
-    </div>
-</div>
-<!-- page's kode herunder -->
-</body>
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
 </html>

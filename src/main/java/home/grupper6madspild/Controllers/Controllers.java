@@ -1,7 +1,15 @@
 package home.grupper6madspild.Controllers;
 
+import org.springframework.ui.Model;
+import home.grupper6madspild.Model.Donation;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class Controllers {
@@ -35,10 +43,10 @@ public class Controllers {
     public String sporing() {
         return "sporing";
     }
-    @GetMapping("/virksomhed/donation")
-    public String donation() {
-        return "donation";
-    }
+//    @GetMapping("/virksomhed/donation")
+//    public String donation() {
+//        return "donation";
+//    }
 
     // Organisation pages
     @GetMapping("/organisation")
@@ -52,5 +60,27 @@ public class Controllers {
     @GetMapping("/organisation/madspildhjemløse")
     public String madspildhjemløse() {
         return "madspildhjemløse";
+    }
+
+
+    // Donation
+    private List<Donation> donations = new ArrayList<>();
+
+    @GetMapping("/virksomhed/donation")
+    public String showDonationForm(Model model) {
+        model.addAttribute("donation", new Donation());
+        return "donation";
+    }
+
+    @PostMapping("/virksomhed/donation")
+    public String submitDonation(@ModelAttribute Donation donation) {
+        donations.add(donation);
+        return "redirect:/opslag";
+    }
+
+    @GetMapping("/opslag")
+    public String viewDonations(Model model) {
+        model.addAttribute("donations", donations);
+        return "opslag";
     }
 }

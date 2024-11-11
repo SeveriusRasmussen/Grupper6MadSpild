@@ -1,0 +1,159 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+/* Title styling */
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 1.5em 0 0.5em;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Content box styling */
+.content-box {
+    background-color: #82D66D;
+    margin: 0.5em auto 1.5em;
+    padding: 1.5em;
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #040404;
+}
+/* Starter her søgefelt */
+/* Container for at centrere søgefeltet på skærmen */
+.search-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Søgefeltets container */
+.search-box {
+    position: relative; /* Gør det muligt at placere ikonet inde i inputfeltet */
+    width: 300px; /* Fast bredde på søgefeltet */
+}
+
+/* Inputfeltet */
+.search-box input[type="text"] {
+    width: 100%; /* Fylder hele bredden af .search-box */
+    padding: 0.5em 0.5em 0.5em 2.5em; /* Giver ekstra plads til venstre for ikonet */
+    border: 1px solid #ccc; /* Grå kant rundt om inputfeltet */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 16px; /* Tekststørrelse */
+    outline: none; /* Fjerner den blå outline, når feltet er aktivt */
+}
+
+/* Søgeikonet */
+.search-icon {
+    position: absolute; /* Placerer ikonet inde i inputfeltet */
+    top: 50%; /* Placerer ikonet i midten vertikalt */
+    left: 10px; /* Giver en lille afstand fra venstre kant af inputfeltet */
+    transform: translateY(-50%); /* Justerer ikonet, så det er perfekt centreret vertikalt */
+    font-size: 20px; /* Gør søgeikonet større */
+    color: #007BFF; /* Blå farve til søgeikonet */
+}
+
+/* slutter her søgefelt */
+/* Page container der indeholder både opskrifterne og favoritboksen */
+.page-container {
+    display: flex;
+    justify-content: space-between; /* Placerer opskrifterne og favoritboksen ved siden af hinanden */
+    gap: 20px; /* Afstand mellem opskrifterne og favoritboksen */
+    padding: 20px; /* Ydre afstand for hele siden */
+}
+
+/* Opskrifterne container */
+.recipes-container {
+    display: flex;
+    flex-direction: column; /* Stabler opskriftskortene vertikalt */
+    gap: 20px; /* Afstand mellem opskrifterne */
+    flex: 2; /* Gør denne del bredere end favoritboksen */
+}
+
+/* Enkel opskrift kort */
+.recipe-card {
+    display: flex;
+    align-items: center;
+    background-color: #82D66D; /* Grøn baggrund */
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-info {
+    flex: 2;
+    padding-right: 1em;
+    color: #040404;
+    line-height: 1.5;
+}
+
+.recipe-image {
+    flex: 1;
+}
+
+.recipe-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Favorit opskrifter boks */
+.favorite-recipes-box {
+    background-color: #82D66D; /* Grøn baggrundsfarve */
+    width: 250px; /* Fast bredde */
+    padding: 1.5em;
+    border-radius: 15px; /* Runde hjørner */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling for favoritboksen */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+.star {
+    font-size: 24px;
+    color: #FFD700;
+}
+
+/* Liste over favoritopskrifter */
+.recipe-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-list li {
+    font-size: 16px;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.recipe-list li::before {
+    content: "•";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}

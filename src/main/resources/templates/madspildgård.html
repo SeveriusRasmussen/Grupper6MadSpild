@@ -3,91 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/allPages.css">
-  <link rel="stylesheet" href="/madspilgård.css">
+  <link rel="stylesheet" href="/bannerItems.css">
+  <link rel="stylesheet" href="/madspild.css">
   <title>Danmark mod Madspild Homepage</title>
 
 </head>
 <body>
-<div class="banner">
-  <img src="/pictures/FoodWaste.png" alt="Logo" class="logo">
-  <div class="name-buttons">
-    <div class="dropdown">
-      <button>Forbruger</button>
-      <div class="dropdown-content">
-        <a href="/forbruger/opskrifter">Opskrifter</a>
-        <a href="/forbruger/tips">Tips i holdbarhed</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button>Virksomhed</button>
-      <div class="dropdown-content">
-        <a href="/virksomhed/sporing">Sporingsværktøj</a>
-        <a href="/virksomhed/donation">Donation</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button>Organisation</button>
-      <div class="dropdown-content">
-        <a href="/organisation/madspildgård">Madspild til gårde</a>
-        <a href="/organisation/madspildhjemløse">Madspild til hjemløse</a>
-      </div>
-    </div>
-  </div>
-  <div class="search">
-    <input type="text" placeholder="Søg...">
-    <button class="search-button">
-      <img src="magnifying-glass.png" alt="Søg">
-    </button>
-  </div>
-</div>
+  <div th:replace="fragments/banner :: banner"></div>
 <!-- page's kode herunder -->
 
-<main>
-  <h1>Liste over gårde som accepterer madspild som dyrefoder</h1>
-  <div class="content-box">
-    <p>Donér dit overskudsmad til lokale gårde og gør en forskel! Har du spiseligt madspild – som brød, grøntsager eller andet? Bidrag til at minimere madspild ved at donere det til landbrug, hvor det kan bruges som dyrefoder i stedet for at gå til spilde.</p>
-  </div>
-
-  <div class="layout">
-    <div class="farm-list">
-      <div class="farm-item">
-        <div class="farm-info">
-          <h3>Gård: Mosegård</h3>
-          <p><strong>Adresse:</strong> Møllevej 23, 8740 Brårup</p>
-          <p><strong>Information:</strong> Dyr: Køer, grise og høns</p>
-        </div>
-        <div class="farm-image">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2E_31EgsaHVCXWTURnVkQHegCbskjeLRDng&s" alt="Mosegård billede">
-        </div>
-      </div>
-
-      <div class="farm-item">
-        <div class="farm-info">
-          <h3>Gård: Lundegaard</h3>
-          <p><strong>Adresse:</strong> Skovbrynet 14, 4573 Møllekær</p>
-          <p><strong>Information:</strong> Dyr: Får, geder og ænder</p>
-        </div>
-        <div class="farm-image">
-          <img src="https://www.fritidsmarkedet.dk/assets/imagecache/930x580/agrar/111068_1-0AB9CF18A3AD0E13E1E1206589DD46FF.jpg" alt="Lundegaard billede">
-        </div>
-      </div>
+  <main>
+    <h1>Liste over gårde som accepterer madspild som dyrefoder</h1>
+    <div class="content-box">
+      <p>Donér dit overskudsmad til lokale gårde og gør en forskel! Har du spiseligt madspild – som brød, grøntsager eller andet? Bidrag til at minimere madspild ved at donere det til landbrug, hvor det kan bruges som dyrefoder i stedet for at gå til spilde.</p>
     </div>
 
-    <aside class="sidebar">
-      <h3>Søg på gårde nær dig...</h3>
-      <ul>
-        <li>Egebakkegård (8,5 km)</li>
-        <li>Engtoftegård (9,3 km)</li>
-        <li>Solbakkegård (10,5 km)</li>
-      </ul>
-    </aside>
-  </div>
-</main>
+    <div class="layout">
+      <div class="farm-list">
+        <div class="farm-item">
+          <div class="farm-info">
+            <h3>Gård: Mosegård</h3>
+            <p><strong>Adresse: </strong> Møllevej 23, 8740 Brårup</p>
+            <p><strong>Information:</strong> Dyr: Køer, grise og høns</p>
+          </div>
+          <div class="farm-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2E_31EgsaHVCXWTURnVkQHegCbskjeLRDng&s" alt="Mosegård billede">
+          </div>
+        </div>
 
-<footer>
-  <a href="/" class="back-button">Tilbage</a>
-</footer>
+        <div class="farm-item">
+          <div class="farm-info">
+            <h3>Gård: Lundegaard</h3>
+            <p><strong>Adresse:</strong> Skovbrynet 14, 4573 Møllekær</p>
+            <p><strong>Information:</strong> Dyr: Får, geder og ænder</p>
+          </div>
+          <div class="farm-image">
+            <img src="https://www.fritidsmarkedet.dk/assets/imagecache/930x580/agrar/111068_1-0AB9CF18A3AD0E13E1E1206589DD46FF.jpg" alt="Lundegaard billede">
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="search-box">
+          <input type="text" placeholder="Søg på gårde nær dig...">
+          <span class="search-icon">🔍</span>
+        </div>
+        <ul class="farm-list">
+          <li>Egebakkegård (8,5 km)</li>
+          <li>Engtoftegård (9,3 km)</li>
+          <li>Solbakkegård (10,5 km)</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <div th:replace="fragments/footer :: footer"></div>
 
 </body>
 </html>

@@ -3,43 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/allPages.css">
+    <link rel="stylesheet" href="/bannerItems.css">
+    <link rel="stylesheet" href="/tips.css">
     <title>Danmark mod Madspild Homepage</title>
 
 </head>
 <body>
-<div class="banner">
-    <img src="/pictures/FoodWaste.png" alt="Logo" class="logo">
-    <div class="name-buttons">
-        <div class="dropdown">
-            <button>Forbruger</button>
-            <div class="dropdown-content">
-                <a href="/forbruger/opskrifter">Opskrifter</a>
-                <a href="/forbruger/tips">Tips i holdbarhed</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button>Virksomhed</button>
-            <div class="dropdown-content">
-                <a href="/virksomhed/sporing">Sporingsværktøj</a>
-                <a href="/virksomhed/donation">Donation</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button>Organisation</button>
-            <div class="dropdown-content">
-                <a href="/organisation/madspildgård">Madspild til gårde</a>
-                <a href="/organisation/madspildhjemløse">Madspild til hjemløse</a>
-            </div>
-        </div>
-    </div>
-    <div class="search">
-        <input type="text" placeholder="Søg...">
-        <button class="search-button">
-            <img src="magnifying-glass.png" alt="Søg">
-        </button>
-    </div>
-</div>
+<div th:replace="fragments/banner :: banner"></div>
 <!-- page's kode herunder -->
+
+<header>
+    <div class="header-container">
+        <h1 style="color: white;">Tips & Tricks til Holdbarhed af Madvarer</h1>
+        <nav>
+            <ul>
+                <li><a href="#madvarer">Madvarer</a></li>
+                <li><a href="#ingredienser">Ingredienser</a></li>
+                <li><a href="#madrester">Madrester</a></li>
+                <li><a href="#opbevaring">Opbevaring</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <img src="https://images.bonnier.cloud/files/ifo/production/20210428224132/madvarer-vJr0pdCxQLc3a5ZBnEmsXQ.jpg" alt="Madopbevaring" class="hero-image">
+    <div class="hero-text">
+        <h2>Forlæng holdbarheden af dine madvarer</h2>
+        <p>Lær hvordan du bedst opbevarer dine madvarer, ingredienser og madrester for at minimere madspild og sikre friskhed.</p>
+    </div>
+</section>
+
+<section id="madvarer" class="content-section">
+    <h2>Holdbarhed af Madvarer</h2>
+    <div class="content-container">
+        <div class="content-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_paz3v6ULRJ0k7Ta60xSyZlnKCnQkZ76mQ&s" alt="Frugt og grøntsager">
+        </div>
+        <div class="content-text">
+            <p>For at forlænge holdbarheden af dine madvarer kan du opbevare frugt og grøntsager i skufferne i køleskabet og sørge for, at fødevarer opbevares i lukkede beholdere. Dette hjælper med at holde fugten inde og ilten ude, hvilket kan forlænge holdbarheden.</p>
+            <ul>
+                <li><strong>Frugt:</strong> Opbevar æbler og pærer adskilt fra andre frugter, da de producerer ethylen, som kan fremskynde modningen af andre madvarer.</li>
+                <li><strong>Grøntsager:</strong> Gulerødder og selleri holder længere, hvis de opbevares i vand i en lukket beholder. Grønne bladgrøntsager kan opbevares i en plastikpose med en lille smule vand for at bevare friskheden.</li>
+                <li><strong>Bær:</strong> Skyl bær i en eddike-vand opløsning før opbevaring for at minimere bakterievækst og forlænge holdbarheden.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="ingredienser" class="content-section">
+    <h2>Holdbarhed af Ingredienser</h2>
+    <div class="content-container">
+        <div class="content-image">
+            <img src="https://f.nordiskemedier.dk/2xvifjtzpger04bb.jpg" alt="Krydderier og ingredienser">
+        </div>
+        <div class="content-text">
+            <p>For at sikre dine ingredienser holder længere, er det vigtigt at opbevare dem korrekt. En god opbevaring forlænger smagen, kvaliteten og reducerer spild.</p>
+            <ul>
+                <li><strong>Mel:</strong> Opbevar mel i en lufttæt beholder for at undgå fugt og skadedyr. Mel kan også opbevares i fryseren for yderligere holdbarhed.</li>
+                <li><strong>Krydderier:</strong> Krydderier bør opbevares i et mørkt og tørt sted, væk fra direkte sollys for at bevare smagen. Mange krydderier kan holde i op til 2-3 år, hvis de opbevares korrekt.</li>
+                <li><strong>Olier:</strong> Olier som olivenolie bør opbevares i mørke flasker og væk fra direkte sollys for at forhindre oxidering og harskning.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="madrester" class="content-section">
+    <h2>Holdbarhed af Madrester</h2>
+    <div class="content-container">
+        <div class="content-image">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/24/0b/fb/the-crew-goodfood.jpg?w=1200&h=-1&s=1" alt="Madrester i beholdere">
+        </div>
+        <div class="content-text">
+            <p>Madrester kan være en glimrende måde at minimere madspild på, hvis de opbevares korrekt. Brug lufttætte beholdere og overvej om dine rester skal i fryseren for at sikre, at de holder så længe som muligt.</p>
+            <ul>
+                <li><strong>Køleskab:</strong> Opbevar madrester i køleskabet i en lufttæt beholder og sørg for at spise dem indenfor 2-3 dage. Notér datoen på beholderen, så du nemt kan holde styr på hvornår de skal spises.</li>
+                <li><strong>Fryser:</strong> Hvis du ikke har planer om at spise resterne hurtigt, kan du fryse dem ned i op til 3 måneder. Sørg for at pakke resterne tæt for at undgå fryserbrænding.</li>
+                <li><strong>Opvarmning:</strong> Når du genopvarmer madrester, skal de varmes op til mindst 75 grader for at dræbe eventuelle bakterier.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="opbevaring" class="content-section">
+    <h2>Generelle Opbevaringstips</h2>
+    <div class="content-container">
+        <div class="content-image">
+            <img src="https://kingoagentur.dk/media/cache/product_original/product-images/39/8/Knicknclean_K-hlschrank_dent.jpg?1617885226" alt="Opbevaring af madvarer">
+        </div>
+        <div class="content-text">
+            <p>Her er nogle generelle tips til opbevaring af madvarer, der kan hjælpe dig med at forlænge holdbarheden af dine fødevarer og reducere spild:</p>
+            <ul>
+                <li><strong>Køleskabstemperatur:</strong> Sørg for, at dit køleskab er sat til mellem 1-4 grader Celsius for optimal opbevaring af friske varer.</li>
+                <li><strong>Adskillelse:</strong> Opbevar råt kød, fisk og fjerkræ adskilt fra tilberedt mad og grøntsager for at undgå krydskontaminering.</li>
+                <li><strong>Brug beholdere:</strong> Lufttætte beholdere hjælper med at forhindre lugt i køleskabet og holder dine fødevarer friske længere.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+    </div>
+</footer>
+
+
+<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

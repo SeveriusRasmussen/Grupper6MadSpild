@@ -3,43 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/allPages.css">
+        <link rel="stylesheet" href="/bannerItems.css">
+        <link rel="stylesheet" href="/madspild.css">
         <title>Danmark mod Madspild Homepage</title>
 
     </head>
     <body>
-        <div class="banner">
-            <img src="/pictures/FoodWaste.png" alt="Logo" class="logo">
-            <div class="name-buttons">
-                <div class="dropdown">
-                    <button>Forbruger</button>
-                    <div class="dropdown-content">
-                        <a href="/forbruger/opskrifter">Opskrifter</a>
-                        <a href="/forbruger/tips">Tips i holdbarhed</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button>Virksomhed</button>
-                    <div class="dropdown-content">
-                        <a href="/virksomhed/sporing">Sporingsværktøj</a>
-                        <a href="/virksomhed/donation">Donation</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button>Organisation</button>
-                    <div class="dropdown-content">
-                        <a href="/organisation/madspildgård">Madspild til gårde</a>
-                        <a href="/organisation/madspildhjemløse">Madspild til hjemløse</a>
-                    </div>
-                </div>
+        <div th:replace="fragments/banner :: banner"></div>
+        <!-- page's kode herunder -->
+        <main>
+            <h1>Liste over hjemløs center som accepterer rester/madspild til hjemløse</h1>
+            <div class="content-box">
+                <p>Donér dit overskudsmad til hjemløs centre og gør en forskel! Har du spiseligt madspild – som brød, grøntsager eller andet? Bekæmpe madspild ved at donere spiselig madrester til hjemløse. Find en liste over hjemløsecentre eller søg efter det nærmeste center og gør en forskel.</p>
             </div>
-            <div class="search">
-                <input type="text" placeholder="Søg...">
-                <button class="search-button">
-                    <img src="magnifying-glass.png" alt="Søg">
-                </button>
+
+            <div class="layout">
+                <div class="farm-list">
+                    <div class="farm-item">
+                        <div class="farm-info">
+                            <h3>Hjemløs center: Hjemløseenheden København</h3>
+                            <p><strong>Adresse: </strong> Sundholmsvej 22, 2300 København</p>
+                            <p><strong>Information: </strong> Hjælpeorganisation for hjemløse</p>
+                            <p><strong>Telefon nummer: </strong>33 17 41 22</p>
+                        </div>
+                        <div class="farm-image">
+                            <img src="https://lh5.googleusercontent.com/p/AF1QipOuS9rLBtLi7Zof62pCwsiWr_cXsXz6WPBxBqby=w408-h282-k-no" alt="Hjemløs billede">
+                        </div>
+                    </div>
+
+                    <div class="farm-item">
+                        <div class="farm-info">
+                            <h3>Hjemløs center: Kirkens Korshærs Herberg Botilbud</h3>
+                            <p><strong>Adresse: </strong>Hillerødgade 64, 2200 Frederiksberg</p>
+                            <p><strong>Information: </strong>Herberg for hjemløse</p>
+                            <p><strong>Telefon nummer: </strong>38 34 81 25</p>
+                        </div>
+                        <div class="farm-image">
+                            <img src="https://kirkenskorshaer.dk/files/styles/landscape_04/public/media/image/17834786_1874916052750925_6930967747762739539_o.jpg?h=38ad5bbb&itok=HZG8qOJR" alt="Hjemløs billede">
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Søg på hjemløs center nær dig...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <ul class="farm-list">
+                        <li>Mændens hjem (2,5 km)</li>
+                        <li>Kofoeds Kælder (3,1 km)</li>
+                        <li>Forsorgshjemmet Absalon (5,3 km)</li>
+                    </ul>
+                </aside>
             </div>
-        </div>
-    <!-- page's kode herunder -->
+        </main>
+
+        <div th:replace="fragments/footer :: footer"></div>
     </body>
 </html>

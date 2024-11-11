@@ -1,0 +1,108 @@
+/* Billedet */
+.flex-container {
+    max-height: calc(100vh - 200px); /* Justér 200px afhængigt af højden på banner og footer*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centerer horisontalt */
+    align-items: center; /* Centerer lodret */
+}
+.centered-image {
+    max-width: 50%;
+    height: auto;
+    opacity: 0.5;
+}
+
+/* information bokser */
+.infoVærd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.box {
+    flex: 1;
+    margin: 30px 10px;
+    padding: 20px;
+    background-color: #81d46c;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+}
+.box h1 {
+    margin: 5px 0; /* reducér top- og bundmargin */
+}
+
+/* Buttons */
+.button {
+    background-color: #276b3a;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    height: 80px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #388e3c;
+}
+
+.button-wrapper {
+    position: relative;
+    margin: 0; /* Fjern margin for at sikre, at knapperne start fra venstre. */
+}
+.button-container {
+    display: flex; /* Gør containeren til en flex container */
+    flex-wrap: wrap; /* Tillader knapper at bryde til næste linje, hvis de ikke passer. */
+    justify-content: flex-start; /* Juster knapperne centralt */
+    padding: 0; /* Fjern ekstra padding */
+    margin: 0; /* fjerne margin */
+    gap: 10px; /* Ingen ekstra mellemrum mellem knapperne */
+}
+
+.description {
+    display: none; /* Skjul beskrivelsen som standard */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+.button-wrapper:hover .description,
+.button-wrapper:focus-within .description {
+    display: block; /* Vis beskrivelsen ved hover eller fokus */
+}
+
+/* Tabellen */
+table {
+    width: 85%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #31844c;
+}
+
+td {
+    background-color: #62cf85;
+}
+
+tr:nth-child(even) {
+    background-color: #3cc815;
+}
