@@ -152,8 +152,9 @@ h1 {
     transform: translateY(-50%); /* Vertikal justering til midten */
     font-size: 20px; /* Gør bullet større */
 }
+/* herunder slettes pga. forvirring mellem to css filer. */
 /* Back button styling */
-.back-button {
+/*.back-button {
     display: inline-block;
     background-color: #276b3a;
     color: white;
@@ -168,4 +169,4 @@ h1 {
 
 .back-button:hover {
     background-color: #388e3c;
-}
+}*/
