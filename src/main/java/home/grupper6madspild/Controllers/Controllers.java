@@ -43,10 +43,6 @@ public class Controllers {
     public String sporing() {
         return "sporing";
     }
-//    @GetMapping("/virksomhed/donation")
-//    public String donation() {
-//        return "donation";
-//    }
 
     // Organisation pages
     @GetMapping("/organisation")
