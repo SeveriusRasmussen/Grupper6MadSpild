@@ -13,7 +13,7 @@
         <h1>Opslag fra Virksomheder</h1>
         <div th:each="donation : ${donations}">
             <h2>Virksomhedsnavn: <span th:text="${donation.companyName}"></span></h2>
-            <p>Besked: <span th:text="${donation.message}"></span></p>
+            <p style="white-space: pre-wrap">Besked:<br><span th:text="${donation.message}"></span></p>
             <hr>
         </div>
 
